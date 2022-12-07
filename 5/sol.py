@@ -43,7 +43,7 @@ def steps(state, moves, preserve = False):
     return state
 
 def format(state):
-    return "".join(state[k][-1] for k in sorted(state))
+    return "".join(state[k][-1] for k in sorted(state, key = int))
     
 # p1
 print(format(steps(state, moves)))
