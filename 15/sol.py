@@ -27,8 +27,6 @@ def format(rows, beacons):
     mn_c = min(c for l in rows.values() for p in l for c in p)
     mx_c = max(c for l in rows.values() for p in l for c in p)
 
-    print(mn_r, mx_r, mn_c, mx_c)
-
     delta = 5
     res = []
     for r in range(mn_r - delta, mx_r + delta + 1):
@@ -82,5 +80,5 @@ def part2(rows, lo, hi):
             prev = (c1, c2)
     return None
 
-print(part1(rows, 10))
+print(part1(rows, 2000000))
 print(part2(rows, 0, 4000000))
