@@ -21,7 +21,6 @@ for line in fileinput.input(encoding="utf-8"):
 def dp(n, o, t, e):
     if t <= 0:
         return 0 if e == 0 else dp("AA", o, 26, e - 1)
-
     res = 0
     bs = 1 << v2i[n]
     if (bs & o) == 0 and w[n] > 0:
